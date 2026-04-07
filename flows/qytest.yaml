@@ -1,0 +1,147 @@
+appId: com.changan.oushangCos1
+
+---
+# 启动APP，不清除状态
+- launchApp:
+    clearState: False
+
+
+- waitForAnimationToEnd:
+    timeout: 30000
+# - tapOn:
+#     text: "同意"
+
+# # 向左滑动屏幕3次
+# - repeat:
+#     times: 3
+#     commands:
+#       - swipe:
+#           direction: LEFT
+
+# # 点击屏幕5次
+# - repeat:
+#     times: 5
+#     commands:
+#       - tapOn:
+#           point: 50%, 50%
+
+# # 不重新启动APP
+# - launchApp:
+#     stopApp: false
+
+# # 点击菜单栏底部我的按钮
+# - tapOn:
+#     id: icon
+#     index: 4
+
+# # 点击去登录按钮
+# - tapOn: 您还未登录
+# - assertVisible: 建议使用购车时在经销商登记的手机号码
+# - tapOn: 密码登录
+# - assertVisible: 请输入手机号
+# - tapOn: 请输入手机号
+# - inputText: 15922507735
+# - tapOn: 请输入密码
+# - inputText: Aa123456
+
+# # 🔥 获取验证码 - 从环境变量读取
+# - waitForAnimationToEnd:
+#     timeout: 5000
+# - tapOn: 请输入图形验证码  # 点击验证码输入框
+# - inputText: ${img_code}  # 从环境变量获取验证码
+# - tapOn:
+#     id: cb_agreement
+# - tapOn: 登录
+# 点击发现按钮
+- tapOn: 发现
+# 向上滑动屏幕
+- swipe:
+    start: 50%, 70% # 起点：屏幕宽度50%，高度70%
+    end: 50%, 30% # 终点：屏幕宽度50%，高度30%
+    duration: 500 # 滑动持续时间（毫秒），数值越大越慢
+# 点击资讯-查看详情
+- tapOn:
+    point: 3%,38%
+# 点击收藏
+- tapOn:
+    id: fav
+# 点击点赞
+- tapOn:
+    id: thumb
+# 点击分享按钮
+- tapOn:
+    id: bar_img_more
+- waitForAnimationToEnd:
+    timeout: 3000
+# 点击分享海报
+- tapOn: 分享海报
+- tapOn:
+    id: ivClose
+# 返回首页
+- tapOn:
+    id: bar_img_back
+
+- tapOn:
+    id: iv_tab
+- tapOn: 社区
+- waitForAnimationToEnd:
+    timeout: 3000
+- tapOn: 话题广场
+- waitForAnimationToEnd:
+    timeout: 3000
+- tapOn:
+    point: 0%,4%
+- waitForAnimationToEnd:
+    timeout: 3000
+- tapOn: 查看更多
+- waitForAnimationToEnd:
+    timeout: 3000
+- tapOn:
+    point: 0%,4%
+- waitForAnimationToEnd:
+    timeout: 3000
+- tapOn: 精选
+- waitForAnimationToEnd:
+    timeout: 3000
+- tapOn:
+    point: 0%,4%
+- waitForAnimationToEnd:
+    timeout: 3000
+- tapOn: 活动
+- waitForAnimationToEnd:
+    timeout: 3000
+- tapOn:
+    id: icon
+    index: 2
+- waitForAnimationToEnd:
+    timeout: 3000
+- tapOn:
+    id: adv
+- waitForAnimationToEnd:
+    timeout: 3000
+- tapOn:
+    point: 0%,2%
+- tapOn:
+    id: iv_bg
+- waitForAnimationToEnd:
+    timeout: 3000
+- tapOn:
+    id: bar_img_back
+
+- tapOn: 购车
+- waitForAnimationToEnd:
+    timeout: 3000
+- tapOn: 预约试驾
+- waitForAnimationToEnd:
+    timeout: 3000
+- tapOn: 姓名 请填写姓名
+- inputText: 小张
+
+- tapOn: 确认
+- tapOn:
+    point: 8%,75%
+- tapOn: 预约到店试驾
+
+# 生成测试报告
+
+    output: "./reports/test_report.html"  # 指定报告输出路径

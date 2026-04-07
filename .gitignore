@@ -1,0 +1,18 @@
+# Test outputs
+test-reports/
+*.log
+*.xml
+
+# Maestro outputs
+.maestro/
+maestro-output/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
